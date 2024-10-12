@@ -1,0 +1,5 @@
+/.idea
+/node_modules/
+
+#secure-info
+/authInfo.js
