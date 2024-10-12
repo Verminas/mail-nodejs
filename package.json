@@ -2,14 +2,27 @@
   "name": "mail-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "repository": "https://github.com/Verminas/mail-nodejs.git",
+  "author": "Verminas <veremeeva96@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "tsc -w",
+    "dev": "nodemon --inspect dist/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@types/nodemailer": "^6.4.16",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "nodemailer": "^6.9.15"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
   }
 }
