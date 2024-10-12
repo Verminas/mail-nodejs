@@ -1,9 +1,16 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
-import {authInfo} from "./authInfo";
+import dotenv from 'dotenv';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+dotenv.config()
+
+const authInfo = {
+  user: process.env.USER || 'example@gmail.com',
+  pass: process.env.PASS || 'this pass - from app password in google account',
+  toUsers: process.env.USERS || 'example2@gmail.com',
+}
 
 const transporter = nodemailer.createTransport({
   service: "Gmail",
@@ -12,7 +19,6 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: authInfo.user,
-    // this pass - from app password in google account
     pass: authInfo.pass,
   },
 });

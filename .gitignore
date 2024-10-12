@@ -4,3 +4,4 @@
 
 #secure-info
 /src/authInfo.ts
+/.env
