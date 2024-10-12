@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5000;
 dotenv.config()
 
 const authInfo = {
+  // todo: не работает с почтой что ранее использовалась по локальному хосту -> завести новую почту
   user: process.env.USER || 'example@gmail.com',
   pass: process.env.PASS || 'this pass - from app password in google account',
   toUsers: process.env.USERS || 'example2@gmail.com',
